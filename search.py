@@ -83,7 +83,7 @@ class Search:
         parser.parse(content, config)
 
         modtime = os.path.getmtime(path)
-        print "adding to index: path: %s size:%d tags:'%s' headlines:'%s' modtime=%d" % (
+        print "adding to index: path: %s size:%d do these tags work?:'%s' headlines:'%s' modtime=%d" % (
             path, len(content), parser.tags, parser.headlines, modtime)
         writer.add_document(
             path=path

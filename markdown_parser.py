@@ -50,21 +50,21 @@ class MarkdownParser:
         tags_regex = config["TAGS_REGEX"]
         tags_to_ignore = config["TAGS_TO_IGNORE"]
         if len(markdown_text):
-            tags_line = u''
+            tags = []
             if tags_prefix:
                 # find tags line
                 for l in markdown_text.split("\n"):
-                    if l.startswith(tags_prefix):
-                        tags_line = l.replace(tags_prefix, "")
+                    tagsFound = re.findall(tags_regex, l)
+                    if bool(tagsFound):
+                        for tag in tagsFound:
+                          tags.append(tag.replace(tags_prefix, ""))
             else:
                 # first line of content
-                tags_line = markdown_text.split("\n", 1)[0]
-
-            tags_line = tags_line.lower()
+                tags = markdown_text.split("\n", 1)[0]
 
             # apply regex
-            pattern = re.compile(tags_regex, re.UNICODE)
-            tags = set(pattern.findall(tags_line))
+            #pattern = re.compile(tags_regex, re.UNICODE)
+            #tags = set(pattern.findall(tags_line))
             if tags:
                 return u" ".join([t for t in tags if t not in tags_to_ignore])
                 # Only choose nouns
