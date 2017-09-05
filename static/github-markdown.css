@@ -4,14 +4,14 @@
 }
 
 .markdown-body {
-  -webkit-text-size-adjust: 100%;
+  /*-webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  text-size-adjust: 100%;*/
   color: #333;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 10px;
-  line-height: 1.6;
+  /*font-size: 10px;
+  line-height: 1.6;*/
   word-wrap: break-word;
   background-color: white;
   padding: 4px;
@@ -189,7 +189,7 @@
 
 .markdown-body code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
+  /*font-size: 12px;*/
 }
 
 .markdown-body pre {

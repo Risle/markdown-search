@@ -1,5 +1,5 @@
 # Path to markdown files
-MARKDOWN_FILES_DIR = "/home/user/wiki"
+MARKDOWN_FILES_DIR = "/path/to/searchable/directory"
 
 # Location of index file
 INDEX_DIR = "search_index"
@@ -14,7 +14,7 @@ SHOW_PARSED_QUERY=True
 USE_TAGS=True
 
 # Optional prefix in a markdown file, e.g. "tags: python search markdown tutorial"
-TAGS_PREFIX=""
+TAGS_PREFIX="#"
 
 # List of tags that should be ignored
 TAGS_TO_IGNORE = "and are what how its not with the"
